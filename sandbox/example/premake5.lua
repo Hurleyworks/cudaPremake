@@ -29,7 +29,7 @@ kind "ConsoleApp"
 
 	buildcustomizations "BuildCustomizations/CUDA 11.6"
 
-	cudaFiles {SOURCE_DIR .. "**.cu"} -- files NVCC compiles
+	cudaFiles {"sandbox/example/" .. SOURCE_DIR .. "**.cu"}
 	cudaMaxRegCount "32"
 
 	cudaCompilerOptions {"-arch=sm_75", 
