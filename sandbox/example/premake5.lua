@@ -1,6 +1,3 @@
--- Include the premake5 CUDA module
-require('premake5-cuda')
-
 
 project "Example"
 
@@ -32,7 +29,7 @@ kind "ConsoleApp"
 
 	buildcustomizations "BuildCustomizations/CUDA 11.6"
 
-	cudaFiles {SOURCE_DIR .. "*.cu"} -- files NVCC compiles
+	cudaFiles {SOURCE_DIR .. "**.cu"} -- files NVCC compiles
 	cudaMaxRegCount "32"
 
 	cudaCompilerOptions {"-arch=sm_75", 

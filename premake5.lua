@@ -4,8 +4,6 @@
 -- Include the premake5 CUDA module
 require('premake5-cuda')
 
--- https://github.com/JohannesMP/Premake-for-Beginners
-
 workspace "NVIDA"
 	architecture "x64"
 	location ("builds")
@@ -14,11 +12,7 @@ if _ACTION == "vs2019" then
    location ("builds/VisualStudio2019")
 end
 
-	
-
--- Premake5 writes these standard options for the host compiler. 
--- By default, optimization and debug settings are inherited by NVCC.
-configurations 
+	configurations 
 	{ 
 		"Debug", 
         "Release",
